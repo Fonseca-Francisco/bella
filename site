@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Overlay -->
+    <nav class="navbar">
+        <div class="logo-space"></div>
+        <div class="nav-buttons">
+            <div class="nav-left">
+                <button data-section="catalogo">Catálogo</button>
+                <button data-section="pecas">Peças Personalizadas</button>
+            </div>
+
+            <button id="logo-btn" class="logo-btn" aria-label="Voltar ao topo">
+                <img src="img/2-removebg-preview.png" alt="Logo">
+            </button>
+
+            <div class="nav-right">
+                <button data-section="precario">Preçário</button>
+                <button data-section="contactos">Contactos</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1 id="hero-title" data-text="Bem-vindo"><span id="type-text"></span><span class="cursor">|</span></h1>
+    </section>
+
+    <!-- Catálogo Section -->
+    <section id="catalogo">
+        <h2 class="section-title">Catálogo</h2>
+        <br></br>
+        <div class="catalogo-grid">
+            <div class="catalogo-item"><img src="img/1.png" alt="Item 1"></div>
+            <div class="catalogo-item"><img src="img/2.png" alt="Item 2"></div>
+            <div class="catalogo-item"><img src="img/1-removebg-preview.png" alt="Item 3"></div>
+            <div class="catalogo-item"><img src="img/2-removebg-preview.png" alt="Item 4"></div>
+            <div class="catalogo-item"><img src="img/1.png" alt="Item 5"></div>
+            <div class="catalogo-item"><img src="img/2.png" alt="Item 6"></div>
+            <div class="catalogo-item"><img src="img/1-removebg-preview.png" alt="Item 7"></div>
+            <div class="catalogo-item"><img src="img/2-removebg-preview.png" alt="Item 8"></div>
+            <div class="catalogo-item"><img src="img/1.png" alt="Item 9"></div>
+            <div class="catalogo-item"><img src="img/2.png" alt="Item 10"></div>
+            <div class="catalogo-item"><img src="img/1-removebg-preview.png" alt="Item 11"></div>
+            <div class="catalogo-item"><img src="img/2-removebg-preview.png" alt="Item 12"></div>
+        </div>
+        <br></br>
+        <div class="catalogo-more">
+            <a class="btn" href="https://www.instagram.com/bellaboutique_costura/" target="_blank" rel="noopener noreferrer">Ver mais</a>
+        </div>
+    </section>
+
+    <!-- Peças Personalizadas Section -->
+    <section id="pecas">
+        <div>
+            <h2>Peças Personalizadas</h2>
+            <p>Conteúdo de peças personalizadas aqui</p>
+        </div>
+    </section>
+
+    <!-- Preçário Section -->
+    <section id="precario">
+        <div>
+            <h2>Preçário</h2>
+            <p>Conteúdo do preçário aqui</p>
+        </div>
+    </section>
+
+    <!-- Contactos Section -->
+    <section id="contactos">
+        <div class="contactos-info">
+            <h2>Contactos</h2>
+            <p>Contacto: 910182453 (Chamadas/Whatsapp)</p>
+            <p>Horário:</p> 
+            <p>Segunda a Sexta-feira: 9:00-12:30 | 14:00-19:00</p>
+            <p>Quinta-feira: 9:00-12:30 | 14:00-17:00</p>
+            <p>Sábado: 9:00-12:30</p>
+            <p>Domingo: Encerrado</p>
+        </div>
+
+        <div class="contactos-map">
+            <iframe id="gmap_canvas" src="https://maps.google.com/maps?width=383&amp;height=325&amp;hl=en&amp;q=R.%20Flower%205%20Porto+(Bella%20Boutique)&amp;t=h&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" aria-hidden="false"></iframe>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
