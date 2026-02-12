@@ -157,10 +157,11 @@ section {
 /* Contactos map positioning */
 .contactos-info {
     /* reserve room for the framed map on the right */
-    width: calc(100% - 440px);
+    width: calc(100% - 480px);
     max-width: none;
     text-align: left;
     margin-left: 24px;
+    padding-right: 24px; /* add space between text and framed map */
 }
 .contactos-map {
     position: absolute;
@@ -294,4 +295,31 @@ section h2 {
     height: 56px;
     width: auto;
     display: block;
+}
+
+/* Mobile navbar adjustments */
+@media (max-width: 700px) {
+    .navbar {
+        padding: 10px 14px;
+    }
+    .nav-buttons {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+        width: auto;
+    }
+    .nav-left,
+    .nav-right {
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+    }
+    .nav-left { order: 2; }
+    .logo-btn { order: 1; margin: 0; }
+    .nav-right { order: 3; }
+    .logo-btn img { height: 84px; }
+    .nav-left button, .nav-right button {
+        padding: 10px 12px;
+        font-size: 1rem;
+    }
 }
