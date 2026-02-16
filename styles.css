@@ -10,7 +10,12 @@ body {
     color: #333;
     background-color: #F2E5D7;
 }
-
+b:visited {
+    color: #63372C;
+}
+b:hover {
+    color: #E1D0C2;
+}
 /* Top Overlay */
 .navbar {
     position: fixed;
