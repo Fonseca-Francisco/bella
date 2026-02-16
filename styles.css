@@ -16,6 +16,10 @@ b:visited {
 b:hover {
     color: #E1D0C2;
 }
+
+.prec{
+    text-align: right;   
+}
 /* Top Overlay */
 .navbar {
     position: fixed;
@@ -49,6 +53,8 @@ b:hover {
     width: auto;
     display: block;
 }
+
+
 
 /* Hamburger Menu Toggle */
 .menu-toggle {
@@ -228,6 +234,17 @@ section {
 #precario {
     background-color: #E1D0C2;
     color: #452D27;
+}
+
+#precario p {
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prec {
+    font-size: 1.1em;
 }
 
 /* Contactos Section */
