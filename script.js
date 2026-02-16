@@ -35,6 +35,44 @@ if (logoBtn) {
     });
 }
 
+// Slideshow for Peças Personalizadas
+(function() {
+    const slideImages = [
+        'img/slide/1-removebg-preview.png',
+        'img/slide/1.png',
+        'img/slide/2-removebg-preview.png',
+        'img/slide/2.png',
+        'img/slide/bg.jpeg',
+        'img/slide/test.jpg'
+    ];
+    
+    let currentSlide = 0;
+    const slideImg = document.getElementById('slideshow-image');
+    const currentSlideSpan = document.getElementById('current-slide');
+    const totalSlidesSpan = document.getElementById('total-slides');
+    const prevBtn = document.querySelector('.slide-prev');
+    const nextBtn = document.querySelector('.slide-next');
+    
+    if (!slideImg || !prevBtn || !nextBtn) return;
+    
+    totalSlidesSpan.textContent = slideImages.length;
+    
+    function updateSlide() {
+        slideImg.src = slideImages[currentSlide];
+        currentSlideSpan.textContent = currentSlide + 1;
+    }
+    
+    prevBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
+        updateSlide();
+    });
+    
+    nextBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % slideImages.length;
+        updateSlide();
+    });
+})();
+
 // Typewriter effect for hero title
 (function() {
     const heroTitle = document.getElementById('hero-title');
