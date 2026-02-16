@@ -1,11 +1,27 @@
-// Scroll to section when button is clicked
-const buttons = document.querySelectorAll('.navbar button');
-buttons.forEach(button => {
+// Mobile menu toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
+
+// Close menu when a navigation item is clicked
+const navButtons = document.querySelectorAll('.nav-menu button');
+navButtons.forEach(button => {
     button.addEventListener('click', () => {
         const sectionId = button.getAttribute('data-section');
         const section = document.getElementById(sectionId);
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
+            // Close mobile menu
+            if (menuToggle && navMenu) {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
         }
     });
 });

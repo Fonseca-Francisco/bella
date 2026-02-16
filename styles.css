@@ -16,57 +16,133 @@ body {
     top: 0;
     width: 100%;
     background-color: rgba(99, 55, 44, 0.85);
-    padding: 15px 30px;
+    padding: 12px 20px;
     z-index: 100;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    height: 70px;
 }
 
-.logo-space {
+/* Logo button */
+.logo-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    z-index: 101;
+}
+
+.logo-btn img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+/* Hamburger Menu Toggle */
+.menu-toggle {
     display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 101;
 }
 
-.nav-buttons {
+.menu-toggle span {
+    width: 28px;
+    height: 3px;
+    background-color: #F2E5D7;
+    margin: 5px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(12px, 12px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(10px, -10px);
+}
+
+/* Navigation Menu */
+.nav-menu {
     display: flex;
-    width: 100%;
+    gap: 40px;
     align-items: center;
-    justify-content: center;
-    gap: 56px;
 }
 
-.nav-left,
-.nav-right {
-    display: flex;
-    gap: 56px;
-    align-items: center;
-    flex: 1;
-}
-
-.nav-left {
-    justify-content: flex-end;
-    padding-right: 16px;
-}
-
-.nav-right {
-    justify-content: flex-start;
-    padding-left: 16px;
-}
-
-.navbar button {
+.nav-menu button {
     background: none;
     border: none;
     color: #F2E5D7;
     cursor: pointer;
     font-weight: bold;
     transition: 0.3s;
-    padding: 8px 14px;
+    padding: 8px 0;
     border-bottom: 2px solid transparent;
     font-size: 1em;
+    white-space: nowrap;
 }
 
-.navbar button:hover {
+.nav-menu button:hover {
     border-bottom: 2px solid #fff;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .navbar {
+        height: 70px;
+        padding: 0 15px;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        background-color: rgba(99, 55, 44, 0.95);
+        padding: 20px 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        align-items: stretch;
+    }
+    
+    .nav-menu.active {
+        max-height: 400px;
+    }
+    
+    .nav-menu button {
+        padding: 16px 20px;
+        border-bottom: 1px solid rgba(242, 229, 215, 0.2);
+        text-align: left;
+        border-radius: 0;
+    }
+    
+    .nav-menu button:hover {
+        background-color: rgba(69, 45, 39, 0.5);
+        border-bottom: 1px solid rgba(242, 229, 215, 0.2);
+    }
+    
+    .logo-btn img {
+        height: 45px;
+    }
 }
 
 /* Sections */
@@ -277,49 +353,3 @@ section h2 {
 }
 @media (max-width: 380px) {
     .catalogo-grid { grid-template-columns: 1fr; }
-}
-
-/* Logo button */
-.logo-btn {
-    background: none;
-    border: none;
-    padding: 0 12px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    position: static;
-    margin: 0 48px;
-    z-index: 101;
-}
-.logo-btn img {
-    height: 56px;
-    width: auto;
-    display: block;
-}
-
-/* Mobile navbar adjustments */
-@media (max-width: 700px) {
-    .navbar {
-        padding: 10px 14px;
-    }
-    .nav-buttons {
-        flex-direction: column;
-        gap: 12px;
-        align-items: center;
-        width: auto;
-    }
-    .nav-left,
-    .nav-right {
-        width: 100%;
-        justify-content: center;
-        gap: 12px;
-    }
-    .nav-left { order: 2; }
-    .logo-btn { order: 1; margin: 0; }
-    .nav-right { order: 3; }
-    .logo-btn img { height: 84px; }
-    .nav-left button, .nav-right button {
-        padding: 10px 12px;
-        font-size: 1rem;
-    }
-}
