@@ -37,13 +37,15 @@ if (logoBtn) {
 
 // Slideshow for Peças Personalizadas
 (function() {
+    // 📝 ADICIONE NOVAS IMAGENS AQUI: adicione o caminho da imagem entre aspas e separe com vírgula
+    // Exemplo: 'img/slide/nova-imagem.png',
     const slideImages = [
-        'img/slide/1-removebg-preview.png',
-        'img/slide/1.png',
-        'img/slide/2-removebg-preview.png',
-        'img/slide/2.png',
-        'img/slide/bg.jpeg',
-        'img/slide/test.jpg'
+        'img/slide/slide1.png',  // ← IMAGEM 1: substitua ou adicione novas abaixo
+        'img/slide/slide2.png',  // ← IMAGEM 2
+        'img/slide/slide3.png',  // ← IMAGEM 3
+        'img/slide/slide4.png',  // ← IMAGEM 4
+        'img/slide/slide5.png',  // ← IMAGEM 5
+        'img/slide/slide6.png'   // ← IMAGEM 6
     ];
     
     let currentSlide = 0;
